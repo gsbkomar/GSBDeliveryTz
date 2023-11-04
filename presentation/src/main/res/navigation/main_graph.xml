@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/bottomNavFragment">
+    <fragment
+        android:id="@+id/bottomNavFragment"
+        android:name="gsbkomar.gsbdelivery.screens.navigation.BottomNavFragment"
+        android:label="BottomNavFragment" >
+        <action
+            android:id="@+id/action_bottomNavFragment_to_citySettingsFragment"
+            app:destination="@id/citySettingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainTapeFragment"
+        android:name="gsbkomar.gsbdelivery.screens.tape.MainTapeFragment"
+        android:label="fragment_main_tape"
+        tools:layout="@layout/fragment_main_tape" />
+    <fragment
+        android:id="@+id/citySettingsFragment"
+        android:name="gsbkomar.gsbdelivery.screens.city_settings.CitySettingsFragment"
+        android:label="fragment_city_settings"
+        tools:layout="@layout/fragment_city_settings" >
+        <action
+            android:id="@+id/action_citySettingsFragment_to_bottomNavFragment"
+            app:destination="@id/bottomNavFragment" />
+    </fragment>
+</navigation>
